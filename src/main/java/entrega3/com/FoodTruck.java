@@ -1,34 +1,27 @@
 package entrega3.com;
-
 import java.util.ArrayList;
-
 public class FoodTruck  {
 	
 	public String nombre;
 	public ArrayList<String> servicios;
 	public String descripcion;
 	public String url_pagina_web;
-	public String whataApp;
-	public String Twitter;
+	public String whatsApp;
+	public String twitter;
 	public String instagram;
-	public String pathImagen;
 	public ArrayList<String> zonas;
-	public String Estado;// aceptado , rechazado. 
-    public int valoracion;// limpieza , simpatia , calidad , precio , sabor , diseño.
-	
-	public FoodTruck(String nombre, ArrayList<String> servicios, String descripcion, String url_pagina_web,
-			String whataApp, String twitter, String instagram, String pathImagen, ArrayList<String> zonas , int valoracion) {
-		super();
+	public ArrayList<String> path_imagenes;
+
+	public FoodTruck(String nombre, ArrayList<String> servicios, String descripcion, String url_pagina_web, String whatsApp, String twitter, String instagram, ArrayList<String> zonas, ArrayList<String> path_imagenes) {
 		this.nombre = nombre;
 		this.servicios = servicios;
 		this.descripcion = descripcion;
 		this.url_pagina_web = url_pagina_web;
-		this.whataApp = whataApp;
-		Twitter = twitter;
+		this.whatsApp = whatsApp;
+		this.twitter = twitter;
 		this.instagram = instagram;
-		this.pathImagen = pathImagen;
 		this.zonas = zonas;
-		this.valoracion = valoracion;
+		this.path_imagenes = path_imagenes;
 	}
 
 	public String getNombre() {
@@ -63,20 +56,20 @@ public class FoodTruck  {
 		this.url_pagina_web = url_pagina_web;
 	}
 
-	public String getWhataApp() {
-		return whataApp;
+	public String getWhatsApp() {
+		return whatsApp;
 	}
 
-	public void setWhataApp(String whataApp) {
-		this.whataApp = whataApp;
+	public void setWhatsApp(String whatsApp) {
+		this.whatsApp = whatsApp;
 	}
 
 	public String getTwitter() {
-		return Twitter;
+		return twitter;
 	}
 
 	public void setTwitter(String twitter) {
-		Twitter = twitter;
+		this.twitter = twitter;
 	}
 
 	public String getInstagram() {
@@ -87,14 +80,6 @@ public class FoodTruck  {
 		this.instagram = instagram;
 	}
 
-	public String getPathImagen() {
-		return pathImagen;
-	}
-
-	public void setPathImagen(String pathImagen) {
-		this.pathImagen = pathImagen;
-	}
-
 	public ArrayList<String> getZonas() {
 		return zonas;
 	}
@@ -103,12 +88,11 @@ public class FoodTruck  {
 		this.zonas = zonas;
 	}
 
-	public int getValoracion() {
-		return valoracion;
+	public ArrayList<String> getPath_imagenes() {
+		return path_imagenes;
 	}
 
-	public void setValoracion(int valoracion) {
-		this.valoracion = valoracion;
+	public void setPath_imagenes(ArrayList<String> path_imagenes) {
+		this.path_imagenes = path_imagenes;
 	}
-
 }

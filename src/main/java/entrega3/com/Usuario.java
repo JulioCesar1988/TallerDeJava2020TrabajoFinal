@@ -1,9 +1,5 @@
 package entrega3.com;
-
-// INFORMACION DE USUARIO .
-
 public class Usuario {
-
 	public String nombre;
 	public String apellido;
 	public String dni;
@@ -19,7 +15,6 @@ public class Usuario {
 		this.email = email;
 		this.telefono = telefono;
 		this.contrasenia = contrasenia;
-		//this.tipoUsuario = tipoUsuario;
 	}
 
 	public String getNombre() {
@@ -69,10 +64,5 @@ public class Usuario {
 	public void setContrasenia(String contrasenia) {
 		this.contrasenia = contrasenia;
 	}
-
-
-
-
-	
 
 }
