@@ -31,7 +31,12 @@ public class LoginController {
     @PostMapping(path = "/auth")
 	public ResponseEntity<?> authenticate(@RequestBody UsernaneAndPassword userpass) {
 		System.out.print("informacion que viene del post : " + userpass.getUsername() + userpass.getPassword());
+		// agregar un metodo para obtener el id de usuario
+		
 		if (isLoginSuccess(userpass.getUsername(), userpass.getPassword())) {
+			
+			
+			// se lo agrego aca para poder usarlo en el controller 
 			String token = tokenServices.generateToken(userpass.getUsername(), EXPIRATION_IN_SEC);
 			System.out.print(" token : " + token);
 			return ResponseEntity.ok(new Credentials(token, EXPIRATION_IN_SEC, userpass.getUsername()));

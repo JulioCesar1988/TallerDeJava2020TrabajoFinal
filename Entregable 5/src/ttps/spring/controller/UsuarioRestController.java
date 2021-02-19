@@ -65,18 +65,47 @@ public class UsuarioRestController {
 		
 
 	
-	// GET USER ID
-	@GetMapping("/{id}")
-	public ResponseEntity<Usuario> getUser(@PathVariable("id") long id) {
+//	@GetMapping("/{id}")
+//	public ResponseEntity<Usuario> getUser(@PathVariable("id") long id) {
+//
+//		System.out.println("Obteniendo usuario con id " + id);
+//		Usuario usuario = usuarioService.recuperar(id);
+//		if (usuario == null) {
+//			System.out.println("Usuario con id " + id + " no encontrado");
+//			return new ResponseEntity<Usuario>(HttpStatus.NOT_FOUND);
+//		}
+//		return new ResponseEntity<Usuario>(usuario, HttpStatus.OK);
+//	}
+	
+	
 
-		System.out.println("Obteniendo usuario con id " + id);
-		Usuario usuario = usuarioService.recuperar(id);
-		if (usuario == null) {
-			System.out.println("Usuario con id " + id + " no encontrado");
-			return new ResponseEntity<Usuario>(HttpStatus.NOT_FOUND);
-		}
-		return new ResponseEntity<Usuario>(usuario, HttpStatus.OK);
-	}
+		// GET USER ID
+    @GetMapping("/{id}")
+    public ResponseEntity<Usuario> getUser(@PathVariable("id") long id) {
+   	 System.out.println("Obteniendo usuario con id " + id);
+   	 Usuario usuario = usuarioService.recuperar(id);
+   	 if (usuario == null) {
+   		 System.out.println("Usuario con id " + id + " no encontrado");
+   		 return new ResponseEntity<Usuario>(HttpStatus.NOT_FOUND);
+   	 }
+   	 if (usuario instanceof UsuarioFoodTruck) {
+   		 ((UsuarioFoodTruck) usuario).setFoodTrucks(null);
+   	 }
+   	 if (usuario instanceof Organizador) {
+   		 ((Organizador) usuario).setEventos(null);
+   	 }
+   	 System.out.println("Usuario: " + id);
+   	 return new ResponseEntity<Usuario>(usuario, HttpStatus.OK);
+    }
+
+	
+	
+	
+	
+	
+	
+	
+	
 
 	// UPDATE USER
 	@PutMapping("/{id}")

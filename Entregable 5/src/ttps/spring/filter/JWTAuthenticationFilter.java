@@ -35,7 +35,6 @@
 //        // El login del usuarios es publico
 //        if ("/jwt/auth".equals(req.getRequestURI()) ||
 //                HttpMethod.OPTIONS.matches(req.getMethod())) {
-//            System.out.print("lalala");
 //            chain.doFilter(request, response);
 //            return;
 //        }

@@ -31,7 +31,7 @@ public class FoodTruck implements java.io.Serializable {
 	private String url;
 
 	@Column(name = "WHATSAPP")
-	private String whatsApp;
+	private String whatsapp;
 
 	@Column(name = "TWITTER")
 	private String twitter;
@@ -69,19 +69,18 @@ public class FoodTruck implements java.io.Serializable {
 		this.servicios = servicios;
 		this.descripcion = descripcion;
 		this.url = url;
-		this.whatsApp = whatsApp;
+		this.whatsapp = whatsApp;
 		this.twitter = twitter;
 		this.instagram = instagram;
 		this.zonas = zonas;
 		this.pathImagenes = pathImagenes;
 		this.usuario = usuario;
-
 	}
 
 	@Override
 	public String toString() {
 		return "FoodTruck [foodTruckId=" + foodTruckId + ", nombre=" + nombre + ", servicios=" + servicios
-				+ ", descripcion=" + descripcion + ", url=" + url + ", whatsApp=" + whatsApp
+				+ ", descripcion=" + descripcion + ", url=" + url + ", whatsApp=" + whatsapp
 				+ ", twitter=" + twitter + ", instagram=" + instagram + ", zonas=" + zonas + ", pathImagenes="
 				+ pathImagenes + ", usuario=" + usuario + ", valoracion=" + valoracion +"]";
 	}
@@ -135,11 +134,11 @@ public class FoodTruck implements java.io.Serializable {
 	}
 
 	public String getWhatsApp() {
-		return whatsApp;
+		return whatsapp;
 	}
 
 	public void setWhatsApp(String whatsApp) {
-		this.whatsApp = whatsApp;
+		this.whatsapp = whatsApp;
 	}
 
 	public String getTwitter() {
@@ -180,7 +179,7 @@ public class FoodTruck implements java.io.Serializable {
 		this.servicios = foodtruck.getServicios();
 		this.descripcion = foodtruck.getDescripcion();
 		this.url  = foodtruck.getUrl();
-		this.whatsApp = foodtruck.getWhatsApp();
+		this.whatsapp = foodtruck.getWhatsApp();
 		this.twitter= foodtruck.getTwitter();
 		this.instagram = foodtruck.getInstagram();
 		this.zonas = foodtruck.getZonas();

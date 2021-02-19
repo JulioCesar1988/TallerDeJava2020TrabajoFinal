@@ -14,7 +14,8 @@ public class UsuarioFoodTruck extends Usuario {
 	private static final long serialVersionUID = 1L;
 
 	//fetch = FetchType.EAGER, mappedBy = "topic", cascade = CascadeType.ALL
-	@OneToMany(fetch = FetchType.EAGER, mappedBy = "usuario", cascade = CascadeType.ALL)
+	//@OneToMany(fetch = FetchType.EAGER, mappedBy = "usuario", cascade = CascadeType.ALL)
+	@OneToMany( mappedBy = "usuario", cascade = CascadeType.ALL)
 	private List<FoodTruck> FoodTrucks;
 
 	public UsuarioFoodTruck() {
